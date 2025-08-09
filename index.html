@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KR Importaciones - Tienda Online</title>
-<link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KR Importaciones - Tienda Online</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
-    <header>
-        <img src="./imagenes/logokrimportaciones.png" alt="Logo KR Importaciones" style="width: 150px;">
-    </header>
+  <!-- Encabezado -->
+  <header style="display:flex;align-items:center;gap:16px;justify-content:center;padding:12px 0;">
+    <img src="imagenes/logokrimportaciones.png" alt="Logo KR Importaciones" style="width:150px;height:auto;" />
+    <div>
+      <h1 style="margin:0;">KR Importaciones</h1>
+      <p style="margin:4px 0 0;">¡Todo lo que necesitas, al mejor precio!</p>
+    </div>
+  </header>
 
-    <header>
-        <h1>KR Importaciones</h1>
-        <p>¡Todo lo que necesitas, al mejor precio!</p>
-    </header>
-   
-    <nav>
-        <div>
-            <a href="#home">Inicio</a>
-            <a href="#products">Productos</a>
-            <a href="#contact">Contacto</a>
-        </div>
-        <div>
-            <a href="#cart">
-                <img src="./imagenes/cart-shopping-solid.svg" alt="Carrito" style="width: 20px; height: 20px;">
-            </a>
-            <!-- Botón de ingresar a la cuenta -->
-            <a href="login.html">
-                <button class="btn-login">Mi cuenta/Registrarme</button>
-            </a>
-        </div>
-    </nav>
-    
-    <section class="banner">
-        <h1>Bienvenidos a KR Importaciones</h1>
-        <p>Encuentra los mejores productos importados al alcance de un clic</p>
-    </section>
+  <!-- Navegación -->
+  <nav style="display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 16px;">
+    <div style="display:flex;gap:14px;align-items:center;">
+      <a href="index.html">Inicio</a>
+      <!-- Enlace al otro “index”/página principal del catálogo -->
+      <a href="catalogo-beta.html">Productos</a>
+      <!-- Si tienes una página de contacto real, cámbiala por contacto.html -->
+      <a href="#contacto">Contacto</a>
+    </div>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <a href="cart.html" aria-label="Carrito">
+        <img src="imagenes/cart-shopping-solid.svg" alt="Carrito" style="width:20px;height:20px;" />
+      </a>
+      <!-- Segundo “index”: formulario/registro -->
+      <a href="formulario-registro.html">
+        <button class="btn-login" type="button">Mi cuenta / Registrarme</button>
+      </a>
+    </div>
+  </nav>
 
-    <div class="container" id="products">
-        <h2>Categoria de Productos</h2>
-        <div class="products">
-            <div class="product">
-                <h3>TECNOLOGIA</h3>
-                <p>Encuentra los mejores precios y calidad 1.1</p>
-            </div>
-            <div class="product">
-                <h3>JUGUETES</h3>
-                <p>Juguetes para bebés</p>
-            </div>
-            <div class="product">
-                <h3>ROPA</h3>
-                <p>Marcas conocidas en un solo lugar</p>
-            </div>
-        </div>
+  <!-- Banner -->
+  <section class="banner" id="home" style="text-align:center;padding:32px 16px;">
+    <h2 style="margin:0 0 8px;">Bienvenidos a KR Importaciones</h2>
+    <p style="margin:0;">Encuentra los mejores productos importados al alcance de un clic</p>
+  </section>
+
+  <!-- Categorías de producto -->
+  <main class="container" id="products" style="padding:24px 16px;max-width:1100px;margin:auto;">
+    <h2 style="text-align:center;">Categorías de Productos</h2>
+
+    <div class="products" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px;">
+      <!-- Hago las tarjetas clicables al catálogo -->
+      <a class="product" href="catalogo-beta.html" style="display:block;padding:16px;text-decoration:none;border:1px solid #e5e5e5;border-radius:10px;">
+        <h3 style="margin-top:0;">TECNOLOGÍA</h3>
+        <p style="margin-bottom:0;">Encuentra los mejores precios y calidad 1.1</p>
+      </a>
+
+      <a class="product" href="catalogo-beta.html" style="display:block;padding:16px;text-decoration:none;border:1px solid #e5e5e5;border-radius:10px;">
+        <h3 style="margin-top:0;">JUGUETES</h3>
+        <p style="margin-bottom:0;">Juguetes para bebés</p>
+      </a>
+
+      <a class="product" href="catalogo-beta.html" style="display:block;padding:16px;text-decoration:none;border:1px solid #e5e5e5;border-radius:10px;">
+        <h3 style="margin-top:0;">ROPA</h3>
+        <p style="margin-bottom:0;">Marcas conocidas en un solo lugar</p>
+      </a>
     </div>
 
-    <footer>
-        <p>KR Importaciones © 2024 - Todos los derechos reservados</p>
-    </footer>
+    <!-- Bloque rápido con botones directos a las otras páginas -->
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:24px;">
+      <a href="catalogo-beta.html"><button type="button">Ir al Catálogo</button></a>
+      <a href="formulario-registro.html"><button type="button">Crear cuenta / Ingresar</button></a>
+    </div>
+  </main>
 
+  <!-- (Sección de contacto opcional dentro de esta misma página) -->
+  <section id="contacto" style="padding:24px 16px;max-width:900px;margin:24px auto;">
+    <h2>Contacto</h2>
+    <p>Si deseas más información, escríbenos a <strong>contacto@krimportaciones.com</strong>.</p>
+  </section>
+
+  <!-- Pie de página -->
+  <footer style="text-align:center;padding:16px 0;border-top:1px solid #eee;">
+    <p style="margin:0;">KR Importaciones © 2024 - Todos los derechos reservados</p>
+  </footer>
 </body>
 </html>
